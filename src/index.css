@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  background: #fff9f3;
+  /* çok hafif krem – hero ile uyumlu */
+}
+
+
+/* Sayfanın genel zemini: hero ile aynı family’de olsun */
+body {
+  background-color: #000;
+  /* ya da hero’nun kullandığı gradientin en koyu tonu */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #111827;
+  overflow-x: hidden;
+  /* yatay taşmaları gizle, beyaz bar görünmesin */
+}
