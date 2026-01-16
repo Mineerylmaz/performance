@@ -12,18 +12,13 @@ body,
   width: 100%;
   min-height: 100%;
   overflow-x: hidden;
-  background: #fff9f3;
-  /* çok hafif krem – hero ile uyumlu */
 }
 
-
-/* Sayfanın genel zemini: hero ile aynı family’de olsun */
+/* PERFORMANCE genel zemin rengi */
 body {
-  background-color: #000;
-  /* ya da hero’nun kullandığı gradientin en koyu tonu */
+  background: #f7eef0;
+  /* tema background'un: COLORS.background */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
   color: #111827;
-  overflow-x: hidden;
-  /* yatay taşmaları gizle, beyaz bar görünmesin */
 }

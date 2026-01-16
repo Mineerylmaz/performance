@@ -1,0 +1,29 @@
+/* src/components/TextType.css */
+
+.text-type {
+    display: inline-flex;
+    align-items: center;
+}
+
+.text-type__content {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+
+    /* Bej → bronz gradient */
+    background: linear-gradient(110deg, #f3dfcf, #e6c0a0, #b07a54);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.text-type__cursor {
+    margin-left: 0.35rem;
+    font-weight: 500;
+    font-size: 0.9em;
+    color: #b07a54;
+}
+
+.text-type__cursor--hidden {
+    opacity: 0;
+}
