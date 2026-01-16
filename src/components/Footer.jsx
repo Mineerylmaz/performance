@@ -6,74 +6,71 @@ import { Instagram, Facebook, Twitter, Heart } from "lucide-react";
 
 // Navbar ile birebir aynı renk paleti
 const COLORS = {
-    blush: "#F4E3E6",
-    background: "#F7EEF0",
-    surface: "#FFFFFF",
-    greySoft: "#E5E5E9",
-    brown: "#6B544A",
-    text: "#1F2933",
-    navy: "#223147",
-    textLight: "#6B7280", // Biraz daha soft metin için
+  blush: "#F4E3E6",
+  background: "#F7EEF0",
+  surface: "#FFFFFF",
+  greySoft: "#E5E5E9",
+  brown: "#6B544A",
+  text: "#1F2933",
+  navy: "#223147",
+  textLight: "#6B7280", // Biraz daha soft metin için
 };
 
 const Footer = () => {
-    const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
 
-    return (
-        <FooterWrapper>
-            <FooterContainer>
-                {/* ÜST KISIM: LOGO & LİNKLER */}
-                <TopSection>
-                    {/* Logo Alanı */}
-                    <BrandSection>
-                        <Logo to="/">
-                            <LogoWord>PERFORMANCE</LogoWord>
-                            <LogoSub>footwear</LogoSub>
-                        </Logo>
-                        <Tagline>
-                            Şehir temposu için tasarlanan konfor ve estetik.
-                        </Tagline>
-                    </BrandSection>
+  return (
+    <FooterWrapper>
+      <FooterContainer>
+        {/* ÜST KISIM: LOGO & LİNKLER */}
+        <TopSection>
+          {/* Logo Alanı */}
+          <BrandSection>
+            <Logo to="/">
+              <LogoWord>PERFORMANCE</LogoWord>
+              <LogoSub>footwear</LogoSub>
+            </Logo>
+            <Tagline>
+              Şehir temposu için tasarlanan konfor ve estetik.
+            </Tagline>
+          </BrandSection>
 
-                    {/* Linkler */}
-                    <LinksSection>
-                        <FooterLink to="/">Anasayfa</FooterLink>
-                        <FooterLink to="/biz-kimiz">Biz Kimiz</FooterLink>
-                        <FooterLink to="/tasarim">Tasarım</FooterLink>
-                        <FooterLink to="/modeller">Modeller</FooterLink>
-                        <FooterLink to="/iletisim">İletişim</FooterLink>
-                    </LinksSection>
+          {/* Linkler */}
+          <LinksSection>
+            <FooterLink to="/">Anasayfa</FooterLink>
+            <FooterLink to="/biz-kimiz">Biz Kimiz</FooterLink>
+            <FooterLink to="/tasarim">Tasarım</FooterLink>
+            <FooterLink to="/modeller">Modeller</FooterLink>
+            <FooterLink to="/iletisim">İletişim</FooterLink>
+          </LinksSection>
 
-                    {/* Sosyal Medya İkonları */}
-                    <SocialSection>
-                        <SocialIcon href="#" aria-label="Instagram">
-                            <Instagram size={20} />
-                        </SocialIcon>
-                        <SocialIcon href="#" aria-label="Facebook">
-                            <Facebook size={20} />
-                        </SocialIcon>
-                        <SocialIcon href="#" aria-label="Twitter">
-                            <Twitter size={20} />
-                        </SocialIcon>
-                    </SocialSection>
-                </TopSection>
+          {/* Sosyal Medya İkonları */}
+          <SocialSection>
+            <SocialIcon href="#" aria-label="Instagram">
+              <Instagram size={20} />
+            </SocialIcon>
+            <SocialIcon href="#" aria-label="Facebook">
+              <Facebook size={20} />
+            </SocialIcon>
+            <SocialIcon href="#" aria-label="Twitter">
+              <Twitter size={20} />
+            </SocialIcon>
+          </SocialSection>
+        </TopSection>
 
-                <Divider />
+        <Divider />
 
-                {/* ALT KISIM: COPYRIGHT & İMZA */}
-                <BottomSection>
-                    <CopyrightText>
-                        &copy; {currentYear} Performance Footwear. Tüm hakları saklıdır.
-                    </CopyrightText>
+        {/* ALT KISIM: COPYRIGHT & İMZA */}
+        <BottomSection>
+          <CopyrightText>
+            &copy; {currentYear} Performance Footwear. Tüm hakları saklıdır.
+          </CopyrightText>
 
-                    <DesignerText>
-                        Designed by <span>Mine Eryılmaz</span>
-                        <HeartIcon size={8} fill={COLORS.brown} />
-                    </DesignerText>
-                </BottomSection>
-            </FooterContainer>
-        </FooterWrapper>
-    );
+
+        </BottomSection>
+      </FooterContainer>
+    </FooterWrapper>
+  );
 };
 
 export default Footer;
