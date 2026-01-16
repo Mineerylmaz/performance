@@ -215,19 +215,29 @@ const ContentGrid = styled.div`
 `;
 
 /* SOL KISIM */
+/* Mevcut kodunuzda LeftInfo styled component'ini bulun ve bu satırları güncelleyin */
+
 const LeftInfo = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
   padding-left: 1rem;
+  
+  /* EKLEME: Bu alanın diğerlerinin üstünde olması için */
+  position: relative; 
+  z-index: 10; 
 
   @media (max-width: 768px) {
     padding-left: 0;
     align-items: center;
     text-align: center;
     margin-top: 0.8rem;
-    order: 1;       /* mobile'de en üstte */
+    order: 1;
     width: 100%;
+    
+    /* Mobilde de z-index'in çalıştığından emin olalım */
+    position: relative;
+    z-index: 50; 
   }
 `;
 
