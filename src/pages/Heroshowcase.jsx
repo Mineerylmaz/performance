@@ -340,6 +340,7 @@ const ProductImageWrapper = styled(motion.div)`
     bottom: 24%;
     transform: translateX(-90%);
     width: clamp(360px, 50vw, 680px);
+    pointer-events: none;
 
     img {
       width: 100%;
