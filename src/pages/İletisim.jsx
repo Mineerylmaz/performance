@@ -8,12 +8,12 @@ import Footer from "../components/Footer";
 
 // ============= RENK PALETİ ============= //
 const COLORS = {
-    bg: "#faf8f4",
-    textMain: "#3E2C28",
-    textLight: "#8D746A",
-    cardBg: "rgba(255, 255, 255, 0.8)",
-    accent: "#D7B29E",
-    white: "#FFFFFF",
+  bg: "#faf8f4",
+  textMain: "#3E2C28",
+  textLight: "#8D746A",
+  cardBg: "rgba(255, 255, 255, 0.8)",
+  accent: "#D7B29E",
+  white: "#FFFFFF",
 };
 
 // 🔥 BODY & ROOT RESET – kenar boşluk yok
@@ -38,139 +38,139 @@ const GlobalStyles = createGlobalStyle`
 
 // ============= ANIMASYONLAR ============= //
 const fadeUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.6, ease: "easeOut" },
-    },
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
 };
 
 const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: { staggerChildren: 0.1 },
-    },
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1 },
+  },
 };
 
 const Iletisim = () => {
-    return (
-        <>
-            <GlobalStyles />
-            <PageWrapper>
-                <Navbar />
+  return (
+    <>
+      <GlobalStyles />
+      <PageWrapper>
+        <Navbar />
 
-                {/* BAŞLIK ALANI */}
-                <HeaderSection>
-                    <motion.div initial="hidden" animate="visible" variants={fadeUp}>
-                        <HeaderTitle>Bize Ulaşın</HeaderTitle>
-                        <HeaderText>
-                            Sorularınız, iş birlikleri veya üretim talepleriniz için <br />
-                            doğrudan bizimle iletişime geçin.
-                        </HeaderText>
-                    </motion.div>
-                </HeaderSection>
+        {/* BAŞLIK ALANI */}
+        <HeaderSection>
+          <motion.div initial="hidden" animate="visible" variants={fadeUp}>
+            <HeaderTitle>Bize Ulaşın</HeaderTitle>
+            <HeaderText>
+              Sorularınız, iş birlikleri veya üretim talepleriniz için <br />
+              doğrudan bizimle iletişime geçin.
+            </HeaderText>
+          </motion.div>
+        </HeaderSection>
 
-                {/* İÇERİK: İLETİŞİM KARTLARI & FORM */}
-                <ContentWrapper>
-                    <ContentContainer>
-                        <GridContainer
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true }}
-                            variants={staggerContainer}
-                        >
-                            {/* SOL TARAF: BİLGİ KARTLARI */}
-                            <InfoColumn variants={fadeUp}>
-                                <InfoCard href="tel:+905354220577">
-                                    <IconBox>
-                                        <Phone size={24} />
-                                    </IconBox>
-                                    <InfoContent>
-                                        <Label>Telefon & WhatsApp</Label>
-                                        <Value>0535 422 0577</Value>
-                                        <SubText>Ömer Yıldız</SubText>
-                                    </InfoContent>
-                                </InfoCard>
+        {/* İÇERİK: İLETİŞİM KARTLARI & FORM */}
+        <ContentWrapper>
+          <ContentContainer>
+            <GridContainer
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={staggerContainer}
+            >
+              {/* SOL TARAF: BİLGİ KARTLARI */}
+              <InfoColumn variants={fadeUp}>
+                <InfoCard href="tel:+905354220577">
+                  <IconBox>
+                    <Phone size={24} />
+                  </IconBox>
+                  <InfoContent>
+                    <Label>Telefon & WhatsApp</Label>
+                    <Value>0535 422 0577</Value>
+                    <SubText>Ömer Yıldız</SubText>
+                  </InfoContent>
+                </InfoCard>
 
-                                <InfoCard href="mailto:oy09401@gmail.com">
-                                    <IconBox>
-                                        <Mail size={24} />
-                                    </IconBox>
-                                    <InfoContent>
-                                        <Label>E-Posta</Label>
-                                        <Value>oy09401@gmail.com</Value>
-                                        <SubText>7/24 Bize yazabilirsiniz</SubText>
-                                    </InfoContent>
-                                </InfoCard>
+                <InfoCard href="mailto:oy09401@gmail.com">
+                  <IconBox>
+                    <Mail size={24} />
+                  </IconBox>
+                  <InfoContent>
+                    <Label>E-Posta</Label>
+                    <Value>oy09401@gmail.com</Value>
+                    <SubText>7/24 Bize yazabilirsiniz</SubText>
+                  </InfoContent>
+                </InfoCard>
 
-                                <InfoCard
-                                    href="http://googleusercontent.com/maps.google.com/7"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <IconBox>
-                                        <MapPin size={24} />
-                                    </IconBox>
-                                    <InfoContent>
-                                        <Label>Fabrika & Ofis</Label>
-                                        <Value>Yıldızlar Ayakkabı</Value>
-                                        <SubText>
-                                            Egemenlik Mah. 6143 Sok. No:8
-                                            <br />
-                                            Bornova, İZMİR
-                                        </SubText>
-                                    </InfoContent>
-                                </InfoCard>
-                            </InfoColumn>
+                <InfoCard
+                  href="http://googleusercontent.com/maps.google.com/7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <IconBox>
+                    <MapPin size={24} />
+                  </IconBox>
+                  <InfoContent>
+                    <Label>Fabrika & Ofis</Label>
+                    <Value>Yıldızlar Ayakkabı</Value>
+                    <SubText>
+                      Egemenlik Mah. 6143 Sok. No:8
+                      <br />
+                      Bornova, İZMİR
+                    </SubText>
+                  </InfoContent>
+                </InfoCard>
+              </InfoColumn>
 
-                            {/* SAĞ TARAF: FORM */}
-                            <FormColumn variants={fadeUp}>
-                                <FormBox>
-                                    <FormTitle>Mesaj Gönderin</FormTitle>
-                                    <FormElement>
-                                        <InputGroup>
-                                            <Input type="text" placeholder="Adınız Soyadınız" />
-                                        </InputGroup>
-                                        <InputGroup>
-                                            <Input type="email" placeholder="E-Posta Adresiniz" />
-                                        </InputGroup>
-                                        <InputGroup>
-                                            <TextArea placeholder="Mesajınız..." rows="5" />
-                                        </InputGroup>
-                                        <SubmitButton
-                                            whileHover={{ scale: 1.02 }}
-                                            whileTap={{ scale: 0.98 }}
-                                        >
-                                            Gönder <Send size={18} />
-                                        </SubmitButton>
-                                    </FormElement>
-                                </FormBox>
-                            </FormColumn>
-                        </GridContainer>
-                    </ContentContainer>
-                </ContentWrapper>
+              {/* SAĞ TARAF: FORM */}
+              <FormColumn variants={fadeUp}>
+                <FormBox>
+                  <FormTitle>Mesaj Gönderin</FormTitle>
+                  <FormElement>
+                    <InputGroup>
+                      <Input type="text" placeholder="Adınız Soyadınız" />
+                    </InputGroup>
+                    <InputGroup>
+                      <Input type="email" placeholder="E-Posta Adresiniz" />
+                    </InputGroup>
+                    <InputGroup>
+                      <TextArea placeholder="Mesajınız..." rows="5" />
+                    </InputGroup>
+                    <SubmitButton
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      Gönder <Send size={18} />
+                    </SubmitButton>
+                  </FormElement>
+                </FormBox>
+              </FormColumn>
+            </GridContainer>
+          </ContentContainer>
+        </ContentWrapper>
 
-                {/* HARİTA BÖLÜMÜ */}
-                <MapSection>
-                    <iframe
-                        title="Yıldızlar Ayakkabı Konum"
-                        width="100%"
-                        height="100%"
-                        style={{ border: 0 }}
-                        allowFullScreen=""
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3125.459319071144!2d27.232473275725535!3d38.43085827182741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b9633b7e4801fb%3A0xf2c9c7fe6e46e8d5!2sEgemenlik%2C%206143.%20Sk.%20No%3A8%2C%2035070%20Bornova%2F%C4%B0zmir!5e0!3m2!1str!2str!4v1768579468127!5m2!1str!2str"
-                    ></iframe>
-                    <MapOverlay />
-                </MapSection>
+        {/* HARİTA BÖLÜMÜ */}
+        <MapSection>
+          <iframe
+            title="Yıldızlar Ayakkabı Konum"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3125.459319071144!2d27.232473275725535!3d38.43085827182741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b9633b7e4801fb%3A0xf2c9c7fe6e46e8d5!2sEgemenlik%2C%206143.%20Sk.%20No%3A8%2C%2035070%20Bornova%2F%C4%B0zmir!5e0!3m2!1str!2str!4v1768579468127!5m2!1str!2str"
+          ></iframe>
+          <MapOverlay />
+        </MapSection>
 
-                <Footer />
-            </PageWrapper>
-        </>
-    );
+        <Footer />
+      </PageWrapper>
+    </>
+  );
 };
 
 export default Iletisim;

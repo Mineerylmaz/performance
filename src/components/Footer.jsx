@@ -28,7 +28,7 @@ const Footer = () => {
           <BrandSection>
             <Logo to="/">
               <LogoWord>PERFORMANCE</LogoWord>
-              <LogoSub>footwear</LogoSub>
+              <LogoSub>Yıldızlar Ayakkabı</LogoSub>
             </Logo>
             <Tagline>
               Şehir temposu için tasarlanan konfor ve estetik.
@@ -45,17 +45,7 @@ const Footer = () => {
           </LinksSection>
 
           {/* Sosyal Medya İkonları */}
-          <SocialSection>
-            <SocialIcon href="#" aria-label="Instagram">
-              <Instagram size={20} />
-            </SocialIcon>
-            <SocialIcon href="#" aria-label="Facebook">
-              <Facebook size={20} />
-            </SocialIcon>
-            <SocialIcon href="#" aria-label="Twitter">
-              <Twitter size={20} />
-            </SocialIcon>
-          </SocialSection>
+
         </TopSection>
 
         <Divider />
@@ -63,7 +53,7 @@ const Footer = () => {
         {/* ALT KISIM: COPYRIGHT & İMZA */}
         <BottomSection>
           <CopyrightText>
-            &copy; {currentYear} Performance Footwear. Tüm hakları saklıdır.
+            &copy; {currentYear} Performance Yıldızlar Ayakkabı. Tüm hakları saklıdır.
           </CopyrightText>
 
 

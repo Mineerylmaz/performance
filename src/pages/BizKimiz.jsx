@@ -223,7 +223,7 @@ const HeroSection = styled.section`
   background: linear-gradient(to bottom, ${COLORS.bg} 0%, #F0EBE5 100%);
 `;
 
-// 🔥 GÜNCELLENEN ALAN: LOGO BOYUTU BÜYÜTÜLDÜ
+// 🔥 GÜNCELLENEN ALAN: LOGO DAHA BELİRGİN YAPILDI
 const HeroBackgroundLogo = styled.div`
   position: absolute;
   top: 50%;
@@ -231,22 +231,24 @@ const HeroBackgroundLogo = styled.div`
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 0;
-  opacity: 0.1;
+
+  opacity: 0.65; /* önceki 0.5 → 0.65 */
 
   img {
-    width: 95vw; /* Masaüstünde daha büyük (50vw'den 65vw'ye çıkarıldı) */
-    height: auto;
-    object-fit: contain;
+    width: 115vw;  /* önceki ~90vw → 115 */
+    max-width: 1300px;
+    filter: contrast(1.25) brightness(0.98); /* çizgiyi koyultur */
   }
 
-  /* MOBİL İÇİN ÖZEL AYARLAR */
   @media (max-width: 768px) {
-    opacity: 0.15;
+    opacity: 0.7;
     img {
-      width: 300vw; /* Mobilde çok daha büyük (70vw'den 85vw'ye çıkarıldı) */
+      width: 200vw;
     }
   }
 `;
+
+
 
 const HeroContent = styled(motion.div)`
   position: relative;
@@ -268,27 +270,33 @@ const HeroTag = styled.span`
 const HeroTitle = styled.h1`
   font-family: "Playfair Display", serif;
   font-size: 4rem;
-  color: ${COLORS.textMain};
+  color: #1E120F; /* daha koyu */
   line-height: 1.1;
   margin-bottom: 1.2rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.06);
 
   .accent {
-    color: ${COLORS.accent};
+    color: #C58F79; /* accent’i de koyulttuk */
     font-style: italic;
   }
 
   @media (max-width: 768px) {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
   }
 `;
 
+
+
 const HeroText = styled.p`
-  font-size: 1.1rem;
-  color: ${COLORS.textLight};
-  line-height: 1.6;
+  font-size: 1.15rem;
+  color: #5A433B;
+  line-height: 1.55;
   max-width: 600px;
   margin: 0 auto;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.05);
 `;
+
+
 
 /* STORY SECTION */
 const StoryWrapper = styled.section`
