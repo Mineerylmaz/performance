@@ -26,7 +26,7 @@ const Navbar = () => {
         {/* LOGO */}
         <Logo to="/" onClick={close}>
           <LogoWord>PERFORMANCE</LogoWord>
-          <LogoSub>footwear</LogoSub>
+          <LogoSub>Yıldızlar Ayakkabı</LogoSub>
         </Logo>
 
         {/* DESKTOP LİNKLER */}
