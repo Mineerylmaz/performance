@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
-
+import { useNavigate } from "react-router-dom";
 // --- GLOBAL AYARLAR ---
 const GlobalStyles = createGlobalStyle`
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -39,6 +39,7 @@ const SHOES = [
 export default function HeroShowcase() {
   const [activeIdx, setActiveIdx] = useState(0);
   const activeShoe = SHOES[activeIdx];
+  const navigate = useNavigate();
 
   return (
     <>
@@ -79,8 +80,8 @@ export default function HeroShowcase() {
             </MobileNav>
 
             <ButtonGroup>
-              <PrimaryBtn>KOLEKSİYONU KEŞFET</PrimaryBtn>
-              <SecondaryBtn>TEKNOLOJİ HİKAYESİ</SecondaryBtn>
+              <PrimaryBtn onClick={() => navigate("/modeller")}>KOLEKSİYONU KEŞFET</PrimaryBtn>
+              <SecondaryBtn onClick={() => navigate("/biz-kimiz")}>TEKNOLOJİ HİKAYESİ</SecondaryBtn>
             </ButtonGroup>
           </LeftInfo>
 

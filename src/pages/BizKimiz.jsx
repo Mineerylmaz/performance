@@ -3,23 +3,23 @@ import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { motion } from "framer-motion";
 import {
-    Factory,
-    TrendingUp,
-    Users,
-    Layers,
-    ArrowRight,
+  Factory,
+  TrendingUp,
+  Users,
+  Layers,
+  ArrowRight,
 } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 // ============= PALETTE ============= //
 const COLORS = {
-    bg: "#faf8f4",
-    textMain: "#3E2C28",
-    textLight: "#8D746A",
-    cardBg: "rgba(255, 255, 255, 0.65)",
-    accent: "#D7B29E",
-    white: "#FFFFFF",
+  bg: "#faf8f4",
+  textMain: "#3E2C28",
+  textLight: "#8D746A",
+  cardBg: "rgba(255, 255, 255, 0.65)",
+  accent: "#D7B29E",
+  white: "#FFFFFF",
 };
 
 const GlobalStyles = createGlobalStyle`
@@ -34,169 +34,169 @@ const GlobalStyles = createGlobalStyle`
 
 // ============= ANIMATIONS ============= //
 const fadeUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.8, ease: "easeOut" },
-    },
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
 };
 
 const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: { staggerChildren: 0.1 },
-    },
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1 },
+  },
 };
 
 const BizKimiz = () => {
-    return (
-        <>
-            <GlobalStyles />
-            <PageWrapper>
-                <Navbar />
+  return (
+    <>
+      <GlobalStyles />
+      <PageWrapper>
+        <Navbar />
 
-                {/* HERO SECTION */}
-                <HeroSection>
-                    {/* ARKA PLAN LOGOSU */}
-                    <HeroBackgroundLogo>
-                        <img src="/images/logo.webp" alt="Background Logo" />
-                    </HeroBackgroundLogo>
+        {/* HERO SECTION */}
+        <HeroSection>
+          {/* ARKA PLAN LOGOSU */}
+          <HeroBackgroundLogo>
+            <img src="/images/logo.webp" alt="Background Logo" />
+          </HeroBackgroundLogo>
 
-                    <HeroContent initial="hidden" animate="visible" variants={fadeUp}>
-                        <HeroTag>MİRAS VE GELECEK</HeroTag>
-                        <HeroTitle>
-                            Kuşadası'ndan Doğan
-                            <br />
-                            <span className="accent">Ustalık Hikayesi</span>
-                        </HeroTitle>
-                        <HeroText>
-                            1994'ten bugüne, babadan oğula geçen bir tutku. Mağazacılıktan
-                            endüstriyel üretime uzanan 30 yıllık konfor yolculuğu.
-                        </HeroText>
-                    </HeroContent>
-                </HeroSection>
+          <HeroContent initial="hidden" animate="visible" variants={fadeUp}>
+            <HeroTag>MİRAS VE GELECEK</HeroTag>
+            <HeroTitle>
+              Kuşadası'ndan Doğan
+              <br />
+              <span className="accent">Ustalık Hikayesi</span>
+            </HeroTitle>
+            <HeroText>
+              1994'ten bugüne, babadan oğula geçen bir tutku. Mağazacılıktan
+              endüstriyel üretime uzanan 30 yıllık konfor yolculuğu.
+            </HeroText>
+          </HeroContent>
+        </HeroSection>
 
-                {/* HİKAYE BÖLÜMÜ */}
-                <StoryWrapper>
-                    <StoryContainer>
-                        <GridContainer>
-                            <TextColumn
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ once: true }}
-                                variants={fadeUp}
-                            >
-                                <SectionEyebrow>BAŞLANGIÇ</SectionEyebrow>
-                                <SectionTitle>Temellerin Atıldığı Yer</SectionTitle>
-                                <StoryParagraph>
-                                    Hikayemiz, <strong>1994 yılında Aydın Kuşadası'nda</strong>,
-                                    Sefer Yıldız'ın vizyonuyla başladı. Sektöre perakende
-                                    mağazacılık ile adım atan firmamız, ayakkabının sadece bir
-                                    ürün değil, insan hayatına dokunan bir konfor aracı olduğunu o
-                                    yıllarda keşfetti.
-                                </StoryParagraph>
-                                <StoryParagraph>
-                                    Oğulları, uzun yıllar boyunca babalarının ve sektörün önde
-                                    gelen üreticilerinin yanında, tezgahın tozunu yutarak işin
-                                    mutfağında pişti.
-                                </StoryParagraph>
+        {/* HİKAYE BÖLÜMÜ */}
+        <StoryWrapper>
+          <StoryContainer>
+            <GridContainer>
+              <TextColumn
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+              >
+                <SectionEyebrow>BAŞLANGIÇ</SectionEyebrow>
+                <SectionTitle>Temellerin Atıldığı Yer</SectionTitle>
+                <StoryParagraph>
+                  Hikayemiz, <strong>1994 yılında Aydın Kuşadası'nda</strong>,
+                  Sefer Yıldız'ın vizyonuyla başladı. Sektöre perakende
+                  mağazacılık ile adım atan firmamız, ayakkabının sadece bir
+                  ürün değil, insan hayatına dokunan bir konfor aracı olduğunu o
+                  yıllarda keşfetti.
+                </StoryParagraph>
+                <StoryParagraph>
+                  Oğulları, uzun yıllar boyunca babalarının ve sektörün önde
+                  gelen üreticilerinin yanında, tezgahın tozunu yutarak işin
+                  mutfağında pişti.
+                </StoryParagraph>
 
-                                <SignatureBlock>
-                                    <div className="line"></div>
-                                    <span>Since 1994</span>
-                                </SignatureBlock>
-                            </TextColumn>
+                <SignatureBlock>
+                  <div className="line"></div>
+                  <span>Since 1994</span>
+                </SignatureBlock>
+              </TextColumn>
 
-                            {/* RESİM ALANI */}
-                            <ImageColumn
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ once: true }}
-                                variants={fadeUp}
-                            >
-                                <img src="/images/story-1.webp" alt="Üretim Tarihçesi" />
-                            </ImageColumn>
-                        </GridContainer>
-                    </StoryContainer>
-                </StoryWrapper>
+              {/* RESİM ALANI */}
+              <ImageColumn
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+              >
+                <img src="/images/story-1.webp" alt="Üretim Tarihçesi" />
+              </ImageColumn>
+            </GridContainer>
+          </StoryContainer>
+        </StoryWrapper>
 
-                {/* QUOTE SECTION */}
-                <QuoteSection>
-                    <QuoteContainer
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        variants={fadeUp}
-                    >
-                        <QuoteIcon>”</QuoteIcon>
-                        <QuoteContent>
-                            <QuoteText>
-                                Biz sadece ayakkabı üretmiyoruz; 2004'ten beri babamızdan
-                                öğrendiğimiz esnaf ahlakını, endüstriyel güçle birleştiriyoruz.
-                            </QuoteText>
-                            <QuoteAuthor>Ömer, Önder & Yunus Yıldız</QuoteAuthor>
-                        </QuoteContent>
-                    </QuoteContainer>
-                </QuoteSection>
+        {/* QUOTE SECTION */}
+        <QuoteSection>
+          <QuoteContainer
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+          >
+            <QuoteIcon>”</QuoteIcon>
+            <QuoteContent>
+              <QuoteText>
+                Biz sadece ayakkabı üretmiyoruz; 2004'ten beri babamızdan
+                öğrendiğimiz esnaf ahlakını, endüstriyel güçle birleştiriyoruz.
+              </QuoteText>
+              <QuoteAuthor>Ömer, Önder & Yunus Yıldız</QuoteAuthor>
+            </QuoteContent>
+          </QuoteContainer>
+        </QuoteSection>
 
-                {/* STATS SECTION */}
-                <StatsWrapper>
-                    <StatsContainer>
-                        <StatsHeader>
-                            <SectionTitle style={{ textAlign: "center", fontSize: "2rem" }}>
-                                Üretim Gücümüz
-                            </SectionTitle>
-                        </StatsHeader>
+        {/* STATS SECTION */}
+        <StatsWrapper>
+          <StatsContainer>
+            <StatsHeader>
+              <SectionTitle style={{ textAlign: "center", fontSize: "2rem" }}>
+                Üretim Gücümüz
+              </SectionTitle>
+            </StatsHeader>
 
-                        <StatsGrid
-                            variants={staggerContainer}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true }}
-                        >
-                            <StatCard variants={fadeUp}>
-                                <div className="icon-wrapper"><Factory size={22} /></div>
-                                <h3>2000 m²</h3>
-                                <h6>Üretim Alanı</h6>
-                            </StatCard>
+            <StatsGrid
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <StatCard variants={fadeUp}>
+                <div className="icon-wrapper"><Factory size={22} /></div>
+                <h3>2000 m²</h3>
+                <h6>Üretim Alanı</h6>
+              </StatCard>
 
-                            <StatCard variants={fadeUp}>
-                                <div className="icon-wrapper"><TrendingUp size={22} /></div>
-                                <h3>100 Bin</h3>
-                                <h6>Çift / Yıl</h6>
-                            </StatCard>
+              <StatCard variants={fadeUp}>
+                <div className="icon-wrapper"><TrendingUp size={22} /></div>
+                <h3>100 Bin</h3>
+                <h6>Çift / Yıl</h6>
+              </StatCard>
 
-                            <StatCard variants={fadeUp}>
-                                <div className="icon-wrapper"><Layers size={22} /></div>
-                                <h3>Phylon</h3>
-                                <h6>Teknoloji</h6>
-                            </StatCard>
+              <StatCard variants={fadeUp}>
+                <div className="icon-wrapper"><Layers size={22} /></div>
+                <h3>Phylon</h3>
+                <h6>Teknoloji</h6>
+              </StatCard>
 
-                            <StatCard variants={fadeUp}>
-                                <div className="icon-wrapper"><Users size={22} /></div>
-                                <h3>2. Nesil</h3>
-                                <h6>Yönetim</h6>
-                            </StatCard>
-                        </StatsGrid>
-                    </StatsContainer>
-                </StatsWrapper>
+              <StatCard variants={fadeUp}>
+                <div className="icon-wrapper"><Users size={22} /></div>
+                <h3>2. Nesil</h3>
+                <h6>Yönetim</h6>
+              </StatCard>
+            </StatsGrid>
+          </StatsContainer>
+        </StatsWrapper>
 
-                {/* CTA SECTION */}
-                <CtaSection>
-                    <CtaContainer>
-                        <h2>Kaliteyi Keşfedin</h2>
-                        <CtaButton href="/modeller">
-                            Koleksiyonu İncele <ArrowRight size={18} />
-                        </CtaButton>
-                    </CtaContainer>
-                </CtaSection>
+        {/* CTA SECTION */}
+        <CtaSection>
+          <CtaContainer>
+            <h2>Kaliteyi Keşfedin</h2>
+            <CtaButton href="/modeller">
+              Koleksiyonu İncele <ArrowRight size={18} />
+            </CtaButton>
+          </CtaContainer>
+        </CtaSection>
 
-                <Footer />
-            </PageWrapper>
-        </>
-    );
+        <Footer />
+      </PageWrapper>
+    </>
+  );
 };
 
 export default BizKimiz;

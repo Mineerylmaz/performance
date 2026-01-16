@@ -5,6 +5,8 @@ import HeroShowcase from "./Heroshowcase";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+
 
 // --- RENK PALETİ (Hero ile uyumlu) ---
 const COLORS = {
@@ -188,8 +190,8 @@ const StoryBtn = styled.button`
   }
 `;
 
-export default function Home({ onNavigate }) {
-
+export default function Home() {
+  const navigate = useNavigate();
   // Marquee için kayan yazı animasyonu
   const marqueeVariants = {
     animate: {
@@ -210,7 +212,7 @@ export default function Home({ onNavigate }) {
       <Navbar />
 
       {/* 1. HERO ALANI */}
-      <HeroShowcase onNavigate={onNavigate} />
+      <HeroShowcase onNavigate={useNavigate} />
 
       {/* 2. KAYAN YAZI (MARQUEE) */}
       {/* 2. KAYAN YAZI (MARQUEE) */}
@@ -316,7 +318,7 @@ export default function Home({ onNavigate }) {
             Nude tonların zarafeti ile her kombine uyum sağlayan Performance serisi,
             sabah toplantısından akşam yürüyüşüne kadar yanınızda.
           </motion.p>
-          <StoryBtn>
+          <StoryBtn onClick={() => navigate("/biz-kimiz")}>
             HİKAYEYİ KEŞFET <ArrowRight size={18} />
           </StoryBtn>
         </StoryContent>
